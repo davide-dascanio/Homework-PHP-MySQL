@@ -1,3 +1,4 @@
+<!-- Codice HTML/JavaScrpit per la creazione della barra di navigazione (HOME,VEDI ALTRI MONUMENTI,ACCEDI,CARRELLO)  -->
 <div class="nav">
     <ul>
         <li><a class="active" href="../../index.html">HOME</a></li>
