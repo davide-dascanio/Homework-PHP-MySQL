@@ -1,7 +1,7 @@
-<!-- Codice HTML/JavaScrpit per la creazione della barra di navigazione (HOME,VEDI ALTRI MONUMENTI,ACCEDI,CARRELLO)  -->
+<!-- Codice HTML/JavaScrpit per la creazione della barra di navigazione delle pagine descrittive delle 7 meraviglie (pagina1.php, pagina2.php, ...) -->
 <div class="nav">
     <ul>
-        <li><a class="active" href="../../index.html">HOME</a></li>
+        <li><a class="active" href="../../index.php">HOME</a></li>
         <li class="posizione">
             <a href="javascript:void(0)" style="cursor:pointer" onclick="apriNavFull()"> VEDI GLI ALTRI MONUMENTI </a>
         </li>
@@ -16,7 +16,7 @@
 <div id="navigatore" class="sovrapposizione">
     <a href="javascript:void(0)" class="chiusuraNav" onclick="chiudiNavFull()">&times;</a>
     <div class="sovrapposizione-cont">
-        <a href="../../index.html">HOME</a>
+        <a href="../../index.php">HOME</a>
         <a href="../collegamento_1/pagina1.php">Grande Muraglia Cinese, Cina </a>
         <a href="../collegamento_2/pagina2.php">Petra, Giordania </a>
         <a href="../collegamento_3/pagina3.php">Cristo Redentore, Rio de Janeiro </a>

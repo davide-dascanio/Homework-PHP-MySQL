@@ -56,7 +56,7 @@
 			</div>
 		</div>
 		<?php
-		require("../menu1.php");
+			require("../menu_meraviglie.php");
 		?>
 		<div class="footer">
 			<p> D'Ascanio Project  <br /> &copy; 2025 </p>

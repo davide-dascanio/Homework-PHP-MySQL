@@ -53,16 +53,9 @@
                 </li>
             </ol>
         </div>
-        <div class="nav">
-            <ul>
-                <li> 
-                    <a href="https://www.google.com/"><header><i class="fas fa-user"></i> ACCEDI/REGISTRATI </header></a>
-                </li>
-                <li>
-                    <a href="https://www.google.com/"><header><i class="fas fa-shopping-cart"></i> VAI AL CARRELLO </header></a>
-                </li>
-            </ul>
-        </div>
+        <?php
+            require("menu_home.php");
+        ?>
         <div class="footer">
             <p> D'Ascanio Project  <br /> &copy; 2025 </p>
         </div>
