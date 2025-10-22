@@ -8,7 +8,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 
     <body>
         <h3>Creazione e popolazione del database 7MeraviglieDB</h3>
-
+        
         <?php
             error_reporting(E_ALL);
 
@@ -18,12 +18,12 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         //creazione tabelle
             //creazione tabella Utenti
             $sqlQuery = "CREATE TABLE if not exists $Utenti_table_name (";
-            $sqlQuery.= "UserId int NOT NULL auto_increment, primary key (userId), ";
-            $sqlQuery.= "Nome varchar (50) NOT NULL, ";
-            $sqlQuery.= "Cognome varchar (50) NOT NULL, ";
-            $sqlQuery.= "Username varchar (50) NOT NULL UNIQUE, ";
-            $sqlQuery.= "Password varchar (32) NOT NULL, ";
-            $sqlQuery.= "SommeSpese float";
+            $sqlQuery.= "userId int NOT NULL auto_increment, primary key (userId), ";
+            $sqlQuery.= "nome varchar (50) NOT NULL, ";
+            $sqlQuery.= "cognome varchar (50) NOT NULL, ";
+            $sqlQuery.= "username varchar (50) NOT NULL UNIQUE, ";
+            $sqlQuery.= "password varchar (32) NOT NULL, ";
+            $sqlQuery.= "sommeSpese float";
             $sqlQuery.= ");";
 
             //echo "<pre>$sqlQuery</pre>";
