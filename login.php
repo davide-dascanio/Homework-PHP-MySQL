@@ -1,57 +1,60 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-$msg = "";
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    $msg = "";
 
-/*dati sui nomi delle tabelle e del database, nonche' sulle modalita' di 
-connessione e di selezione del database sono messi in un file a parte */
-require_once("./connessione1.php");
+    /*dati sui nomi delle tabelle e del database, nonche' sulle modalita' di 
+    connessione e di selezione del database sono messi in un file a parte */
+    require_once("./connessione1.php");
 
-//per lo stile
-require_once("./stile_interno.php");
+    //per lo stile
+    require_once("./stile_interno.php");
 
 
 
-//una volta che siamo nel db, verichiamo se siano stati inseriti correttamente
-//i campi username e password e facciamo una query per controllare
+    //una volta che siamo nel db, verichiamo se siano stati inseriti correttamente
+    //i campi username e password e facciamo una query per controllare
 
-if (isset($_POST['invio'])){          // abbiamo appena inviato dati attraverso la form di login
-    if (empty($_POST['username']) || empty($_POST['password'])){
-        $msg = "Dati mancanti. Riprova";
-    }else {                             
-        //verifichiamo se i dati inseriti corrispondono a un account esistente
-        $sql = "SELECT *
-                FROM $Utenti_table_name
-                WHERE username = \"{$_POST['username']}\" AND password =\"{$_POST['password']}\"
-                 ";
+    if (isset($_POST['invio'])){          // abbiamo appena inviato dati attraverso la form di login
+        if (empty($_POST['username']) || empty($_POST['password'])){
+            $msg = "<em>Dati mancanti. Riprova</em>";
+        }else {
+            //verifichiamo se i dati inseriti corrispondono a un account esistente
+            $sql = "SELECT *
+                    FROM $Utenti_table_name
+                    WHERE username = \"{$_POST['username']}\" AND password =\"{$_POST['password']}\"
+                    ";
 
-        // il risultatodella query va in $resultQ
-        if (!$resultQ = mysqli_query($mysqliConnection, $sql)) {
-            $msg = "Questi dati non corrispondono a nessun account.<br /> Riprova o registrati.";
-            exit();
+            // il risultato della query va in $resultQ
+            if (!$resultQ = mysqli_query($mysqliConnection, $sql)) {
+                printf("Errore, la query non ha risultato\n");
+                exit();
+            }
+            
+            //se l'account esiste
+            $row = mysqli_fetch_array($resultQ);
+
+            if($row) {  
+                session_start();
+                $_SESSION['nome']=$row['nome'];
+                $_SESSION['cognome']=$row['cognome'];
+                $_SESSION['username']=$_POST['username'];
+                $_SESSION['spesaFinora']=$row['sommeSpese'];
+                $_SESSION['numeroUtente']=$row['userId'];
+                $_SESSION['dataLogin']=time();
+                $_SESSION['accessoPermesso']=1000;
+                header('Location: https://www.google.com/');    // accesso alla pagina iniziale
+                exit();
+            }else 
+                $msg = "<em>Username e password inseriti non corrispondono a nessun account. <br /> Riprova o registrati.</em>";
         }
-
-        //se l'account esiste
-        $row = mysqli_fetch_array($resultQ);
-
-        if($row) {  
-            session_start();
-            $_SESSION['nome']=$row['nome'];
-            $_SESSION['cognome']=$row['cognome'];
-            $_SESSION['username']=$_POST['username'];
-            $_SESSION['spesaFinora']=$row['sommeSpese'];
-            $_SESSION['numeroUtente']=$row['userId'];
-            $_SESSION['dataLogin']=time();
-            $_SESSION['accessoPermesso']=1000;
-            header('Location: https://www.google.com/');    // accesso alla pagina iniziale
-            exit();
-        }else 
-            $msg = "Username e password inseriti non corrispondono a nessun account. <br /> Riprova o registrati.";
     }
-}
 
-
+    //chiudiamo la connessione
+    $mysqliConnection->close();
 ?>
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -65,26 +68,23 @@ if (isset($_POST['invio'])){          // abbiamo appena inviato dati attraverso 
     <body>
         <h3>User Login</h3>
 
-        <?php echo "<em>".$msg."</em>" ?>
+        <?php 
+            if(!empty($msg)) {
+                echo "<p>".$msg."</p>";
+            }
+        ?>
 
         <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
-            <p>
-                <header> 
-                    <i class="fas fa-user"></i>  username: <input type="text" name="username" size="30" /> 
-                </header>
-            </p>
-
-            <p>
-                <header> 
-                    <i class="fas fa-lock"></i>  password: <input type="password" name="password" size="30" /> 
-                </header>
-            </p>
+            <p>  <i class="fas fa-user"></i>  username: <input type="text" name="username" size="30" /> </p>
+            <p>  <i class="fas fa-lock"></i>  password: <input type="password" name="password" size="30" /> </p>
             
-            <input type="submit" name="invio" value="Accedi">
-            <input type="reset" name="reset" value="Cancella">
+            <p>
+                <input type="submit" name="invio" value="Accedi" />
+                <input type="reset" name="reset" value="Cancella" /> 
+            </p>
             <div class="sezione-registrazione">
                 <p>Non hai ancora un account?</p>
-                <a href="https://www.google.com/" class="bottone-registrati">Registrati</a>
+                <a href="registrazione.php" class="bottone-registrati">Registrati</a>
             </div>
         </form>
 

@@ -3,10 +3,10 @@
 <div class="nav">
     <ul>
         <li> 
-            <a href="login.php"><header><i class="fas fa-user"></i> ACCEDI/REGISTRATI </header></a>
+            <a href="login.php"><i class="fas fa-user"></i> ACCEDI/REGISTRATI </a>
         </li>
         <li>
-            <a href="https://www.google.com/"><header><i class="fas fa-shopping-cart"></i> VAI AL CARRELLO </header></a>
+            <a href="https://www.google.com/"><i class="fas fa-shopping-cart"></i> VAI AL CARRELLO </a>
         </li>
     </ul>
 </div>

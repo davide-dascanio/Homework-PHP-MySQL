@@ -1,6 +1,6 @@
 <?php
 $stile_interno = "
-<style>
+<style type=\"text/css\">
     body {
         font-family: Arial, sans-serif;
         background: #2c3e50;
@@ -78,7 +78,7 @@ $stile_interno = "
     em {
         display: block;
         text-align: center;
-        color: red;
+        color: #e74c3c;
         background: #fadbd8;
         padding: 15px;
         border-radius: 5px;
@@ -115,7 +115,32 @@ $stile_interno = "
         background: #2980b9;
     }
 
+    .messaggio-successo {
+        display: block;
+        text-align: center;
+        background: #fadbd8;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 0 auto 20px;
+        max-width: 400px;
+    }
 
+    .messaggio-successo a {
+        color: #2ec4b6;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .ultima-p {
+        text-align: center; 
+        margin-top: 20px; 
+        color: #a3a6ad;
+    }
+
+    .ultima-p a {
+        color: #2ec4b6;
+    }
+    
 </style>
 ";
 ?>
