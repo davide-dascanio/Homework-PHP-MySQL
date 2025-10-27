@@ -2,6 +2,7 @@
     //dati relativi al db e alle tabelle da usare negli script che includono questo file
     $db_name = "7MeraviglieDB";
     $Utenti_table_name = "Utenti";
+    $Biglietti_table_name = "Biglietti";
 
     //esecuzione del tentativo di connessione al DB creato
     $mysqliConnection = new mysqli("localhost", "root", "root", $db_name);

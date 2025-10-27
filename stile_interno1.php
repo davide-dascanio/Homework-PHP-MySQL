@@ -1,5 +1,5 @@
 <?php
-$stile_interno = "
+$stile_interno1 = "
 <style type=\"text/css\">
     body {
         font-family: Arial, sans-serif;
@@ -98,8 +98,8 @@ $stile_interno = "
         font-size: 14px;
         margin-bottom: 15px;
     }
-    
-    .bottone-registrati {
+
+    .sezione-registrazione a {
         display: inline-block;
         padding: 12px 40px;
         background: #3498db;
@@ -111,7 +111,7 @@ $stile_interno = "
         transition: background 0.3s ease;
     }
     
-    .bottone-registrati:hover {
+    .sezione-registrazione a:hover {
         background: #2980b9;
     }
 

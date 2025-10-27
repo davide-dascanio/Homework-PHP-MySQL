@@ -6,7 +6,7 @@
 
     require_once("./connessione1.php");
 
-    require_once("./stile_interno.php");
+    require_once("./stile_interno1.php");
 
     if(isset($_POST['invio'])) {
         //Validazione campi
@@ -60,7 +60,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head> 
 		<title> Registrazione </title> 
-        <?php echo $stile_interno; ?>
+        <?php echo $stile_interno1; ?>
 	</head>
 	
 	<body>

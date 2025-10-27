@@ -6,7 +6,7 @@
             <a href="login.php"><i class="fas fa-user"></i> ACCEDI/REGISTRATI </a>
         </li>
         <li>
-            <a href="https://www.google.com/"><i class="fas fa-shopping-cart"></i> VAI AL CARRELLO </a>
+            <a href="shop.php"><i class="fas fa-shopping-bag"></i> ACQUISTI I BIGLIETTI </a>
         </li>
     </ul>
 </div>

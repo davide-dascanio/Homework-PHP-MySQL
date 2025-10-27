@@ -8,7 +8,7 @@
     require_once("./connessione1.php");
 
     //per lo stile
-    require_once("./stile_interno.php");
+    require_once("./stile_interno1.php");
 
 
 
@@ -43,7 +43,7 @@
                 $_SESSION['numeroUtente']=$row['userId'];
                 $_SESSION['dataLogin']=time();
                 $_SESSION['accessoPermesso']=1000;
-                header('Location: https://www.google.com/');    // accesso alla pagina iniziale
+                header('Location: shop.php');    // accesso alla pagina iniziale
                 exit();
             }else 
                 $msg = "<em>Username e password inseriti non corrispondono a nessun account. <br /> Riprova o registrati.</em>";
@@ -62,7 +62,7 @@
     <head>
         <title>Login</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-        <?php echo $stile_interno; ?>
+        <?php echo $stile_interno1; ?>
     </head>
 
     <body>
@@ -84,7 +84,7 @@
             </p>
             <div class="sezione-registrazione">
                 <p>Non hai ancora un account?</p>
-                <a href="registrazione.php" class="bottone-registrati">Registrati</a>
+                <a href="registrazione.php">Registrati</a>
             </div>
         </form>
 
