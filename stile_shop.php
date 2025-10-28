@@ -1,5 +1,5 @@
 <?php
-$stile_interno2 = "
+$stile_shop = "
 <style type=\"text/css\">
     * {
         margin: 0;
@@ -27,6 +27,10 @@ $stile_interno2 = "
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
+    }
+    
+    .contenuto-navbar a {
+        text-decoration: none;
     }
     
     .navbar h1 {
@@ -165,6 +169,39 @@ $stile_interno2 = "
     .bottone-compra:hover {
         filter: brightness(1.1);  /* aumenta la luminosità di un elemento del 10% rispetto all'immagine originale */
     }
+
+
+
+
+    /* Notifica carrello */
+    .messaggio-aggiunto {
+        background: #27ae60;
+        color: white;
+        padding: 15px 20px;
+        margin: 20px auto 20px auto;
+        max-width: 1200px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .messaggio-aggiunto p {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+    }
+
+    .messaggio-aggiunto strong {
+        font-size: 18px;
+    }
+
+    .messaggio-aggiunto a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .messaggio-aggiunto a:hover {
+        color: #ecf0f1;
+    }
+
 
 </style>
 ";

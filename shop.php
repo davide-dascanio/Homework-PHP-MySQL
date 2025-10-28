@@ -12,7 +12,7 @@
     //apertura della connessione
     require_once("./connessione1.php");
 
-    require_once("./stile_interno2.php");
+    require_once("./stile_shop.php");
     
     // selezioniamo i biglietti disponibili (dalla tabella Biglietti)
     $sql = "SELECT *
@@ -49,12 +49,35 @@
     <head>
         <title>Shop - Le Sette Meraviglie</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-        <?php echo $stile_interno2; ?>
+        <?php echo $stile_shop; ?>
     </head>
     <body>
         <?php
             require("menu_shop.php");
         ?>
+
+        <?php
+            //Se il carrello non è creato e l'arrey $_POST è vuoto, allora creiamo il carrello
+            if((!isset($_SESSION['carrello']) && !$_POST)) {
+                $_SESSION['carrello'] = array();
+            }else{
+                // Se $_POST['selection'] è settato (1) allora aggiungiamo l'articolo nel carrello
+                if(isset($_POST['selection'])) {
+                    $_SESSION['carrello'][] = $_POST['selection'];
+        ?>  
+                    <!-- Mostra la notifica SOLO se è stato appena aggiunto qualcosa --> 
+                    <div class="messaggio-aggiunto">
+                        <p><strong><i class="fas fa-circle-check"></i> Aggiunto al carrello:</strong> <?php echo $_POST['selection']; ?></p>
+                        <a href="carrello.php">Vai al carrello (<?php echo count($_SESSION['carrello']); ?> articoli)</a> 
+                    </div>
+                    <?php
+                }
+            ?>
+                <?php   
+            }
+        ?>
+
+
         <div class="container-principale">
             <div class="sidebar">
                 <h2>Il tuo profilo</h2>
@@ -96,14 +119,38 @@
                                 <div class="titolo-scheda"><?php echo $nome; ?></div>
                                 <div class="righa-carrello">
                                     <span class="prezzo-scheda"><?php echo $prezzo; ?> &euro;</span>
-                                    <form action="carrello.php" method="post">
+                                    <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+                                        <input type="hidden" name="selection" value="<?php echo $nome; ?>" /> <!-- spiegare delle cose  --> 
                                         <input type="submit" class="bottone-compra" value="Aggiungi al carrello" />
                                     </form>
                                 </div>
                             </div>
                         </div>
-                <?php } ?>
+                        <?php
+                    } 
+                ?>
             </div>  
         </div>
+        
+        <?php
+        /*   VERS. 1
+
+            if ((!isset($_SESSION['carrello']) && !$_POST)) {
+                $_SESSION['carrello']=array();
+                echo "<p> - carrello vuoto - </p>";
+            } else {
+                if ( isset($_POST['selection']) ) {
+                    //echo "<p>inserisco".$_POST['selection']."</p>";
+                    $_SESSION['carrello'][] = $_POST['selection'];
+                }
+                echo "<p>contenuto del carrello:</p>";
+                echo "<ul>";
+                foreach ($_SESSION['carrello'] as $k=>$v)
+                    echo "<li>[$k] $v</li>";
+                echo "</ul>";
+            }
+        */
+        ?>
+
     </body>
 </html>
