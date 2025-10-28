@@ -1,6 +1,9 @@
 <?php
-$stile_interno1 = "
+$stile_autenticazione = "
 <style type=\"text/css\">
+
+    /* stile_autenticazione.php viene require_once in login.php, logout.php e registrazione.php */
+
     body {
         font-family: Arial, sans-serif;
         background: #2c3e50;
@@ -86,20 +89,27 @@ $stile_interno1 = "
         max-width: 400px;
     }
 
-    .sezione-registrazione {
+
+
+
+
+    /* parte di stile che rigurda solo login.php */
+
+
+    .sezione-finale-login {
         text-align: center;
         margin-top: 25px;
         padding-top: 20px;
         border-top: 1px solid #ecf0f1;
     }
     
-    .sezione-registrazione p {
+    .sezione-finale-login p {
         color: #7f8c8d;
         font-size: 14px;
         margin-bottom: 15px;
     }
 
-    .sezione-registrazione a {
+    .sezione-finale-login a {
         display: inline-block;
         padding: 12px 40px;
         background: #3498db;
@@ -111,9 +121,16 @@ $stile_interno1 = "
         transition: background 0.3s ease;
     }
     
-    .sezione-registrazione a:hover {
+    .sezione-finale-login a:hover {
         background: #2980b9;
     }
+
+
+
+
+
+    /* parte di stile che rigurda solo registrazione.php */
+
 
     .messaggio-successo {
         display: block;
@@ -139,6 +156,55 @@ $stile_interno1 = "
 
     .ultima-p a {
         color: #2ec4b6;
+    }
+
+
+
+
+
+    /* parte di stile che rigurda solo logout.php */
+
+
+    .stile-logout {
+        background: white;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        text-align: center;
+    }
+
+    .stile-logout p {
+        color: #7f8c8d;
+        font-size: 16px;
+    }
+
+    .bottone a {
+        display: inline-block;
+        padding: 12px 30px;
+        margin: 10px 5px 0 0;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+    }
+
+    .bottone-verde {
+        background: #27ae60;
+    }
+    
+    .bottone-verde:hover {
+        background: #229954;
+    }
+    
+    .bottone-grigio {
+        background: #95a5a6;
+    }
+    
+    .bottone-grigio:hover {
+        background: #7f8c8d;
     }
     
 </style>

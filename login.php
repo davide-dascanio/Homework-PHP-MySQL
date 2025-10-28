@@ -8,7 +8,7 @@
     require_once("./connessione1.php");
 
     //per lo stile
-    require_once("./stile_interno1.php");
+    require_once("./stile_autenticazione.php");
 
 
 
@@ -62,7 +62,7 @@
     <head>
         <title>Login</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-        <?php echo $stile_interno1; ?>
+        <?php echo $stile_autenticazione; ?>
     </head>
 
     <body>
@@ -82,7 +82,7 @@
                 <input type="submit" name="invio" value="Accedi" />
                 <input type="reset" name="reset" value="Cancella" /> 
             </p>
-            <div class="sezione-registrazione">
+            <div class="sezione-finale-login">
                 <p>Non hai ancora un account?</p>
                 <a href="registrazione.php">Registrati</a>
             </div>
