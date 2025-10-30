@@ -68,7 +68,8 @@
                     <!-- Mostra la notifica SOLO se è stato appena aggiunto qualcosa --> 
                     <div class="messaggio-aggiunto">
                         <p><strong><i class="fas fa-circle-check"></i> Aggiunto al carrello:</strong> <?php echo $_POST['selection']; ?></p>
-                        <a href="carrello.php">Vai al carrello (<?php echo count($_SESSION['carrello']); ?> articoli)</a>  <!-- Conta il numero di articoli nel carrello -->
+                        <a href="carrello.php">Vai al carrello (<?php echo count($_SESSION['carrello']); ?> articoli)</a> oppure
+                        <a href="riepilogo.php">Vai al pagamento (<?php echo count($_SESSION['carrello']); ?> articoli)</a>  <!-- Conta il numero di articoli nel carrello -->
                     </div>
                     <?php
                 }

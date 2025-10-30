@@ -1,6 +1,10 @@
 <?php
 $stile_shop = "
 <style type=\"text/css\">
+
+
+    /* PARTE DI STILE USATO IN shop.php, carrello.php, riepilogo.php */
+
     * {
         margin: 0;
         padding: 0;
@@ -53,9 +57,7 @@ $stile_shop = "
         background: #26272b;
     }
     
-
-
-
+    
     /* Container principale */
     .container-principale {
         display: flex;
@@ -64,10 +66,8 @@ $stile_shop = "
         padding: 0 20px;
     }
     
-    
 
-
-    /* Sidebar profilo */
+    /* Sidebar profilo utente*/
     .sidebar {
         min-width: 210px;
         max-width: 210px;
@@ -99,6 +99,10 @@ $stile_shop = "
 
 
 
+
+
+
+    /* PARTE DI STILE USATO SOLO IN shop.php */
     
     /* Container dei biglietti delle meraviglie */
     .container-meraviglie {
@@ -106,9 +110,6 @@ $stile_shop = "
         flex-wrap: wrap;
         gap: 25px;
     }
-    
-    
-
 
     /* Scheda meraviglia */
     .scheda-meraviglia {
@@ -123,7 +124,7 @@ $stile_shop = "
     .scheda-meraviglia img {
         width: 100%;
         height: 180px;
-        object-fit: cover;  /* controlla il modo in cui un'immagine ridimensionata per adattarsi al suo contenitore */
+        object-fit: cover;  /* controlla il modo in cui un'immagine viene ridimensionata per adattarsi al suo contenitore */
         border-radius: 12px 12px 0 0;
     }
     
@@ -175,6 +176,15 @@ $stile_shop = "
 
 
 
+
+
+
+
+
+
+
+    /* PARTE DI STILE USATO SOLO IN shop.php e carrello.php */
+
     /* Notifica carrello */
     .messaggio-aggiunto {
         background: #27ae60;
@@ -205,9 +215,16 @@ $stile_shop = "
 
 
 
+
+
+
+
+
+
     
 
-    /* Parte di stile relativo SOLO a carrello.php */
+    /* PARTE DI STILE USATO SOLO IN carrello.php */
+
     .container-carrello {
         flex: 1;           /* fa crescere gli elementi per occupare tutto lo spazio disponibile nel contenitore */
     }
@@ -354,6 +371,160 @@ $stile_shop = "
         filter: brightness(1.1);
     }
 
+
+
+
+
+
+
+
+
+
+
+    /* PARTE DI STILE USATO SOLO IN riepilogo.php */
+
+    .container-riepilogo {
+        flex: 1;
+    }
+
+    .titolo-riepilogo {
+        font-size: 28px;
+        color: #f6f7f9;
+        margin-bottom: 30px;
+    }
+
+    .riepilogo-vuoto {
+        background: #17181b;
+        border: 1px solid #26272b;
+        border-radius: 12px;
+        padding: 60px;  
+        text-align: center;
+    }
+
+    .riepilogo-vuoto p {
+        font-size: 20px;
+        color: #a3a6ad;
+        margin-bottom: 30px;
+    }
+
+    .riepilogo-vuoto a {
+        background: #27ae60;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .riepilogo-vuoto a:hover {
+        background: #229954;
+    }
+
+    .riepilogo-pieno {
+        background: #17181b;
+        border: 1px solid #26272b;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .articolo-riepilogo {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #26272b;
+    }
+
+    .immagine-articolo {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;    /* immagine viene ridimensionata per adattarsi al suo contenitore */
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+
+    .info-articolo {
+        flex: 1;
+    }
+
+    .nome-articolo {
+        font-size: 16px;
+        font-weight: bold;
+        color: #f6f7f9;
+    }
+
+    .prezzo-articolo {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2ec4b6;
+        background: #26272b;
+        padding: 8px 16px;
+        border-radius: 6px;
+    }
+
+    .container-prezzoTot {
+        background: #17181b;
+        border: 2px solid #2ec4b6;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .titolo-totale {
+        font-size: 22px;
+        font-weight: bold;
+        color: #f6f7f9;
+    }
+
+    .valore-totale {
+        font-size: 28px;
+        font-weight: bold;
+        color: #2ec4b6;
+    }
+    
+    .container-bottoni {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .bottone-grey {
+        background: #95a5a6;
+        color: white;
+        border: none;
+        padding: 14px 30px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: auto;
+    }
+
+    .bottone-grey:hover {
+        background: #7f8c8d;
+    }
+    
+    .bottone-verde {
+        background: #27ae60;
+        color: white;
+        border: none;
+        padding: 14px 30px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .bottone-verde:hover {
+        background: #c0392b;
+    }
+    
 </style>
 ";
 ?>

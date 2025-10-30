@@ -3,6 +3,14 @@
     error_reporting(E_ALL);
     $msg = "";
 
+    session_start();
+
+    /* Se l'utente loggato ripassa per Accedi/Registrati viene fatto l'unset, altrimenti carrello uguale per un utente con doppio account o per due utenti diversi */
+    if (isset($_SESSION['accessoPermesso'])){
+        unset($_SESSION);
+        session_destroy();
+    }
+
     /*dati sui nomi delle tabelle e del database, nonche' sulle modalita' di 
     connessione e di selezione del database sono messi in un file a parte */
     require_once("./connessione1.php");
