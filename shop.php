@@ -68,7 +68,7 @@
                     <!-- Mostra la notifica SOLO se è stato appena aggiunto qualcosa --> 
                     <div class="messaggio-aggiunto">
                         <p><strong><i class="fas fa-circle-check"></i> Aggiunto al carrello:</strong> <?php echo $_POST['selection']; ?></p>
-                        <a href="carrello.php">Vai al carrello (<?php echo count($_SESSION['carrello']); ?> articoli)</a> 
+                        <a href="carrello.php">Vai al carrello (<?php echo count($_SESSION['carrello']); ?> articoli)</a>  <!-- Conta il numero di articoli nel carrello -->
                     </div>
                     <?php
                 }
@@ -120,7 +120,10 @@
                                 <div class="righa-carrello">
                                     <span class="prezzo-scheda"><?php echo $prezzo; ?> &euro;</span>
                                     <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
-                                        <input type="hidden" name="selection" value="<?php echo $nome; ?>" /> <!-- spiegare delle cose  --> 
+                                        <!-- Campo nascosto che contiene il nome del biglietto. Quando l'utente clicca 
+                                        "Aggiungi al carrello", questo valore viene inviato tramite POST e recuperato
+                                        con $_POST['selection'] per aggiungerlo alla sessione carrello -->
+                                        <input type="hidden" name="selection" value="<?php echo $nome; ?>" />
                                         <input type="submit" class="bottone-compra" value="Aggiungi al carrello" />
                                     </form>
                                 </div>
@@ -131,26 +134,5 @@
                 ?>
             </div>  
         </div>
-        
-        <?php
-        /*   VERS. 1
-
-            if ((!isset($_SESSION['carrello']) && !$_POST)) {
-                $_SESSION['carrello']=array();
-                echo "<p> - carrello vuoto - </p>";
-            } else {
-                if ( isset($_POST['selection']) ) {
-                    //echo "<p>inserisco".$_POST['selection']."</p>";
-                    $_SESSION['carrello'][] = $_POST['selection'];
-                }
-                echo "<p>contenuto del carrello:</p>";
-                echo "<ul>";
-                foreach ($_SESSION['carrello'] as $k=>$v)
-                    echo "<li>[$k] $v</li>";
-                echo "</ul>";
-            }
-        */
-        ?>
-
     </body>
 </html>

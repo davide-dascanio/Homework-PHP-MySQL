@@ -24,6 +24,7 @@ $stile_shop = "
     
     .contenuto-navbar {
         align-items: center;
+        justify-content: center;
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
@@ -68,7 +69,8 @@ $stile_shop = "
 
     /* Sidebar profilo */
     .sidebar {
-        width: 310px;
+        min-width: 210px;
+        max-width: 210px;
         background: #17181b;
         border: 1px solid #26272b;
         border-radius: 12px;
@@ -108,7 +110,7 @@ $stile_shop = "
     
 
 
-    /* Card meraviglia con flex column */
+    /* Scheda meraviglia */
     .scheda-meraviglia {
         background: #17181b;
         border: 1px solid #26272b;
@@ -129,7 +131,7 @@ $stile_shop = "
         padding: 18px;
         display: flex;
         flex-direction: column;
-        flex: 1;   /* elemento cresce per occupare tutto lo spazio disponibile nel contenitore */
+        flex: 1;   /* fa crescere gli elementi per occupare tutto lo spazio disponibile nel contenitore */
     }
     
     .titolo-scheda {
@@ -192,16 +194,165 @@ $stile_shop = "
     .messaggio-aggiunto strong {
         font-size: 18px;
     }
-
+    
     .messaggio-aggiunto a {
         color: white;
-        text-decoration: underline;
     }
 
     .messaggio-aggiunto a:hover {
         color: #ecf0f1;
     }
 
+
+
+    
+
+    /* Parte di stile relativo SOLO a carrello.php */
+    .container-carrello {
+        flex: 1;           /* fa crescere gli elementi per occupare tutto lo spazio disponibile nel contenitore */
+    }
+
+    .titolo-carrello {
+        font-size: 28px;
+        color: #f6f7f9;
+        margin-bottom: 30px;
+    }
+
+    .carrello-vuoto {
+        background: #17181b;
+        border: 1px solid #26272b;
+        border-radius: 12px;
+        padding: 60px;  
+        text-align: center;
+    }
+
+    .carrello-vuoto p {
+        font-size: 20px;
+        color: #a3a6ad;
+        margin-bottom: 30px;
+    }
+
+    .carrello-vuoto a {
+        background: #27ae60;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .carrello-vuoto a:hover {
+        background: #229954;
+    }
+
+    .carrello-pieno {
+        background: #17181b;
+        border: 1px solid #26272b;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .articolo-carrello {
+        padding: 15px;
+        border-bottom: 1px solid #26272b;
+        display: flex;
+        align-items: center;
+    }
+    
+    input[type='checkbox'] {
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+
+    .container-pulsanti {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .bottone-rosso1 {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .bottone-rosso1:hover {
+        background: #c0392b;
+    }
+
+    .bottone-rosso2 {
+        background: #0f0f10;
+        color: #e74c3c;
+        border: 2px solid #e74c3c;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .bottone-rosso2:hover {
+        background: #e74c3c;
+        color: white;
+    }
+
+    .bottone-grigio {
+        background: #95a5a6;
+        color: white;
+        border: none;
+        padding: 14px 30px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: auto;
+    }
+
+    .bottone-grigio:hover {
+        background: #7f8c8d;
+    }
+
+    .bottone-bianco {
+        background: white;
+        color: #0f0f10;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .bottone-bianco:hover {
+        background: #CCCCCC;
+    }
+
+    .bottone-acqua {
+        background: #2ec4b6;
+        color: #0f2420;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: auto;
+    }
+
+    .bottone-acqua:hover {
+        filter: brightness(1.1);
+    }
 
 </style>
 ";
