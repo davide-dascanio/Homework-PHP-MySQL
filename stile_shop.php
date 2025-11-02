@@ -3,7 +3,7 @@ $stile_shop = "
 <style type=\"text/css\">
 
 
-    /* PARTE DI STILE USATO IN shop.php, carrello.php, riepilogo.php */
+    /* PARTE DI STILE USATO IN shop.php, carrello.php, riepilogo.php e pagamento.php */
 
     * {
         margin: 0;
@@ -524,6 +524,161 @@ $stile_shop = "
     .bottone-verde:hover {
         background: #c0392b;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* PARTE DI STILE USATO SOLO IN pagamento.php */
+    
+    .container-pagamento {
+        flex: 1;
+    }
+
+    .container-successo {
+        background: #17181b;
+        border: 2px solid #27ae60;
+        border-radius: 12px;
+        padding: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .icona-successo {
+        background: #27ae60;
+        color: white;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        font-weight: bold;
+        margin: 0 auto 20px auto;
+    }
+
+    .titolo-successo {
+        font-size: 32px;
+        color: #27ae60;
+        margin-bottom: 15px;
+    }
+
+    .testo-successo {
+        font-size: 18px;
+        color: #a3a6ad;
+        margin-bottom: 30px;
+    }
+
+    .dettaglio-spesa {
+        background: #26272b;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    .importo-ora {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #f6f7f9;
+    }
+
+    .importo-ora strong {
+        color: #2ec4b6;
+    }
+
+    .spesa-totale {
+        display: flex;
+        justify-content: space-between;
+        border-top: 2px solid #2ec4b6;
+        margin-top: 10px;
+        padding-top: 15px;
+        font-size: 18px;
+    }
+
+    .spesa-totale strong {
+        color: #2ec4b6;
+    }
+
+    .container-errore {
+        background: #17181b;
+        border: 2px solid #e74c3c;
+        border-radius: 12px;
+        padding: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .icona-errore {
+        background: #e74c3c;
+        color: white;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;   /* questo è un cerchio */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        font-weight: bold;
+        margin: 0 auto 20px auto;
+    }
+
+    .titolo-errore {
+        font-size: 32px;
+        color: #e74c3c;
+        margin-bottom: 15px;
+    }
+
+    .testo-errore {
+        font-size: 18px;
+        color: #a3a6ad;
+    }
+    
+    .container-azioni {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .bottone-back {
+        background: #95a5a6;
+        color: white;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .bottone-back:hover {
+        background: #7f8c8d;
+    }
+    
+    .bottone {
+        background: #2ec4b6;
+        color: #0f2420;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .bottone:hover {
+        filter: brightness(1.1);
+    }
+
     
 </style>
 ";

@@ -88,7 +88,7 @@
                 ?>
                         <div class="carrello-vuoto">
                             <p>Il tuo carrello è vuoto</p>
-                            <a href="shop.php">Vai allo Shop</a>
+                            <a href="shop.php">Vai al Catalogo</a>
                         </div>
                         <?php 
                     }else{ 

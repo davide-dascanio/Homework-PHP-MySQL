@@ -80,6 +80,7 @@
 
 
         <div class="container-principale">
+            <!-- Sidebar profilo -->
             <div class="sidebar">
                 <h2>Il tuo profilo</h2>
                 <div class="etichetta-sidebar">Username:</div>
@@ -100,6 +101,7 @@
                 </div>
             </div>
             
+            <!-- Contenuto shop -->
             <div class="container-meraviglie">
                 <?php
                     //ciclo while per scorrere tutti i biglietti
@@ -125,7 +127,7 @@
                                         "Aggiungi al carrello", questo valore viene inviato tramite POST e recuperato
                                         con $_POST['selection'] per aggiungerlo alla sessione carrello -->
                                         <input type="hidden" name="selection" value="<?php echo $nome; ?>" />
-                                        <input type="submit" class="bottone-compra" value="Aggiungi al carrello" />
+                                        <input type="submit" name="aggiungiAlCarrello" class="bottone-compra" value="Aggiungi al carrello" />
                                     </form>
                                 </div>
                             </div>

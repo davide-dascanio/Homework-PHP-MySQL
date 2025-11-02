@@ -106,7 +106,7 @@
                 ?>  
                         <div class="riepilogo-vuoto">
                             <p>Il tuo carrello è vuoto</p>
-                            <a href="shop.php">Vai allo Shop</a>
+                            <a href="shop.php">Vai al Catalogo</a>
                         </div>
                         <?php 
                     }else{
@@ -124,7 +124,7 @@
                                         <div class="prezzo-articolo"><?php echo $biglietto['prezzo']; ?> &euro; </div>
                                     </div>
                                     <?php 
-                                } 
+                                }
                             ?>
                         </div>
                         <div class="container-prezzoTot">
@@ -135,11 +135,11 @@
                         <form action="pagamento.php" method="post">
                             <div class="container-bottoni">
                                 <a href="shop.php" class="bottone-grey">Continua con gli acquisti</a>
-                                <input type="submit" name="paga" value="Procedi con il pagamento" class="bottone-verde" />
+                                <input type="submit" name="invioPagamento" value="Procedi con il pagamento" class="bottone-verde" />
                             </div>
                         </form>
                         <?php 
-                    } 
+                    }
                 ?>
             </div>
         </div>
