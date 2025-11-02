@@ -17,8 +17,6 @@ $stile_shop = "
         color: #f6f7f9;
     }
     
-
-
     /* Navbar dello shop */
     .navbar {
         background: #17181b;
@@ -57,7 +55,6 @@ $stile_shop = "
         background: #26272b;
     }
     
-    
     /* Container principale */
     .container-principale {
         display: flex;
@@ -66,7 +63,6 @@ $stile_shop = "
         padding: 0 20px;
     }
     
-
     /* Sidebar profilo utente*/
     .sidebar {
         min-width: 210px;
