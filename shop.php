@@ -127,7 +127,7 @@
                                         "Aggiungi al carrello", questo valore viene inviato tramite POST e recuperato
                                         con $_POST['selection'] per aggiungerlo alla sessione carrello -->
                                         <input type="hidden" name="selection" value="<?php echo $nome; ?>" />
-                                        <input type="submit" name="aggiungiAlCarrello" class="bottone-compra" value="Aggiungi al carrello" />
+                                        <input type="submit" name="aggiungiAlCarrello" class="bottone-aggiungi" value="Aggiungi al carrello" />
                                     </form>
                                 </div>
                             </div>

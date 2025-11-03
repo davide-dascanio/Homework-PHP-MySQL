@@ -154,7 +154,7 @@ $stile_shop = "
         border-radius: 6px;
     }
     
-    .bottone-compra {
+    .bottone-aggiungi {
         background: #2ec4b6;
         color: #0f2420;
         border: none;
