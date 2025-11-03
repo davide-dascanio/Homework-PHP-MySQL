@@ -48,7 +48,6 @@
                 $_SESSION['cognome']=$row['cognome'];
                 $_SESSION['username']=$_POST['username'];
                 $_SESSION['spesaFinora']=$row['sommeSpese'];
-                $_SESSION['numeroUtente']=$row['userId'];
                 $_SESSION['dataLogin']=time();
                 $_SESSION['accessoPermesso']=1000;
                 header('Location: shop.php');    // accesso alla pagina iniziale
