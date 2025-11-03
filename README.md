@@ -42,7 +42,8 @@ nel database prima di procedere con l'inserimento. In caso di successo, reindiri
 - logout.php: Pagina che gestisce la disconnessione dell'utente distruggendo la sessione attiva. Mostra un messaggio di conferma logout avvenuto con successo e fornisce
 link per tornare alla home o al login. Utilizza lo stile definito in stile_autenticazione.php.
 
-- stile_autenticazione.php: File CSS dedicato alle pagine di autenticazione (login, registrazione, logout). Definisce lo stile per vari elementi.
+- stile_autenticazione.php: Script in cui si definisce una variabile $stile_autenticazione con le regole CSS dedicate alle pagine di autenticazione (login, registrazione, logout).
+Definisce lo stile per vari elementi.
 
 - shop.php: Pagina principale del catalogo che mostra tutti i biglietti disponibili estratti dalla tabella Biglietti. Ogni biglietto è presentato in una scheda con immagine,
 nome della meraviglia e prezzo. Viene mostrata la sidebar con le informazioni del profilo utente (nome, cognome, username, spesa finora) e permette di aggiungere articoli al carrello
@@ -80,13 +81,18 @@ Viene mostrata la sidebar profilo, include (menu_shop.php) e lo stile condiviso 
  
   Questo menu è presente in tutte le pagine operative del sito, quindi (shop, carrello, riepilogo, pagamento).
 
-- stile_shop.php: File CSS principale condiviso tra tutte le pagine operative. Definisce lo stile per tutte gli elementi presenti nelle pagine, come lo stile per la sidebar, la barra di navigazione,
-form, tutti i vari layout strutturali, ecc..
+- stile_shop.php: Script in cui si definisce una variabile $stile_shop con le regole CSS principali condivise tra tutte le pagine operative. Definisce lo stile per tutte gli
+elementi presenti nelle pagine, come lo stile per la sidebar, la barra di navigazione, form, tutti i vari layout strutturali, ecc..
 
 
 Gli stili vengono importati all'interno dei diversi documenti tramite la funzione require_once(). Gli stili vengono applicati stampando nella head la variabile definita nell'apposito script.
 
 I menu vengono importanti all'interno dei diversi documenti tramite la funzione require().
+
+Per la visualizzazione delle icone nei pulsanti e negli elementi dell'interfaccia, il progetto utilizza Font Awesome 6.0, una libreria di icone. Per utilizzare le icone Font Awesome
+nel progetto, è necessario includere il file CSS della libreria nell'header di ogni pagina. Questo si fa aggiungendo un link nella sezione <head> degli script.
+
+
 
 
 
