@@ -84,6 +84,12 @@ Viene mostrata la sidebar profilo, include (menu_shop.php) e lo stile condiviso 
 form, tutti i vari layout strutturali, ecc..
 
 
+Gli stili vengono importati all'interno dei diversi documenti tramite la funzione require_once(). Gli stili vengono applicati stampando nella head la variabile definita nell'apposito script.
+
+I menu vengono importanti all'interno dei diversi documenti tramite la funzione require().
+
+
+
 
 
 
